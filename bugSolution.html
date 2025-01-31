@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+  <script>
+    // Safer method: Create a new script element and append it to the DOM
+    const newScript = document.createElement('script');
+    newScript.textContent = 'alert("This is a safe alert!");';
+    document.head.appendChild(newScript);
+    // Or using an external script
+    // const newScriptExternal = document.createElement('script');
+    // newScriptExternal.src = 'script.js';
+    // document.head.appendChild(newScriptExternal);
+  </script>
+</body>
+</html>
