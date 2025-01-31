@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+  <script>
+    // Incorrectly using innerHTML to insert a script tag, leading to unexpected behavior
+    document.getElementById("myDiv").innerHTML = "<script>alert('This is an alert from an injected script!');</script>";
+  </script>
+</body>
+</html>
